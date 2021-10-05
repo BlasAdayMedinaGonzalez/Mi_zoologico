@@ -1,4 +1,4 @@
-package com.adaysoft.Zoo;
+package com.adaysoft.zoo;
 
 public class Zoologico {
 }

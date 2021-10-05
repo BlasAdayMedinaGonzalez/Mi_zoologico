@@ -1,4 +1,6 @@
-package com.adaysoft.Animales;
+package com.adaysoft.animales;
+
+import static java.lang.System.out;
 
 public class Mamifero extends Animal{
     private double peso;
@@ -16,6 +18,6 @@ public class Mamifero extends Animal{
 
     @Override
     void mostrarInformacion() {
-
+        out.println("");
     }
 }

@@ -1,4 +1,4 @@
-package com.adaysoft.Animales;
+package com.adaysoft.animales;
 
 abstract class Animal {
     private String nombre;
@@ -38,5 +38,9 @@ abstract class Animal {
     }
 
     abstract void mostrarInformacion();
+
+    public static  String generarNombre(){
+        return "";
+    }
 
 }
