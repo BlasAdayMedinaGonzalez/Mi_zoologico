@@ -1,15 +1,12 @@
 package com.adaysoft.animales;
 
 public class Ave extends Animal {
-    private double altitudMaxima;
-    private String colorPlumaje;
-    private String[] tipoPata = {"palmípeda", "garra"};
+    private static float altitudMaxima = 1000.0f;
+    private final static String[] colorPlumaje = {"Rojo", "verde", "azul"};
+    private final static String[] tipoPata = {"palmípeda", "garra"};
 
-    public Ave(String nombre, int edad, String genero, double altitudMaxima, String colorPlumaje, String[] tipoPata) {
+    public Ave(String nombre, int edad, String genero) {
         super(nombre, edad, genero);
-        this.altitudMaxima = altitudMaxima;
-        this.colorPlumaje = colorPlumaje;
-        this.tipoPata = tipoPata;
     }
 
     @Override

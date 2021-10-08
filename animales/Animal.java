@@ -40,7 +40,32 @@ abstract class Animal {
     abstract void mostrarInformacion();
 
     public static  String generarNombre(){
-        return "";
+        String[] name = {"Tifón",
+                "El bicho",
+                "Mango",
+                "Piña",
+                "Juan",
+                "Yasuo",
+                "Misifú",
+                "Bobon",
+                "Rantanplán",
+                "Harambe",
+                "Chimuelo",
+                "Yogu",
+                "Petisuí",
+                "Brego",
+                "Eren YEGA",
+                "Tora",
+                "Yumeko",
+                "Bley",
+                "Marco",
+                "Chiquito",
+                "Carajito",
+                "Iniesta",
+                "Mikasa"
+        };
+        int num = (int) (Math.random()*23);
+        return name[num];
     }
 
 }
