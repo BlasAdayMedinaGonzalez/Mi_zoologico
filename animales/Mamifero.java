@@ -3,19 +3,19 @@ package com.adaysoft.animales;
 import static java.lang.System.out;
 
 public class Mamifero extends Animal{
-    private double peso;
-    private double velocidad;
-    private final static String[] habito = {"diurno", "nocturno"};
-    private final static String[] dieta = {"carnivoro", "herbivoro", "omnivoro"};
-
-    public Mamifero(String nombre, int edad, String genero, double peso, double velocidad) {
-        super(nombre, edad, genero);
-        this.peso = peso;
-        this.velocidad = velocidad;
+    private final static double peso = (Math.random()*50) + 1;
+    private final static double velocidad = (Math.random()*100) + 1;
+    public enum habito {
+        NOCTURNO,
+        DIURNO
+    }
+    public enum dieta {
+        CARNIVORO,
+        HERBIVORO,
+        OMNIVORO
+    }
+    public Mamifero(String nombre, int edad, String genero) {
+        super(nombre, edad);
     }
 
-    @Override
-    void mostrarInformacion() {
-        out.println("");
-    }
 }

@@ -1,45 +1,27 @@
 package com.adaysoft.animales;
 
-abstract class Animal {
+public class Animal {
     private String nombre;
     private int edad;
-    private String genero;
 
-    public Animal(String nombre, int edad, String genero) {
+    public enum genero {
+        Macho,
+        Hembra
+    }
+
+    public Animal(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
-        this.genero = genero;
     }
 
-    public  Animal (){}
+    public static genero generarGenero() {
+        genero[] generoGenerado = {genero.Macho, genero.Hembra};
+        int num = (int) (Math.random()*generoGenerado.length);
+        return generoGenerado[num];
+    };
 
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    abstract void mostrarInformacion();
-
-    public static  String generarNombre(){
+    public static String generarNombre(){
         String[] name = {"Tifón",
                 "El bicho",
                 "Mango",
@@ -64,8 +46,9 @@ abstract class Animal {
                 "Iniesta",
                 "Mikasa"
         };
-        int num = (int) (Math.random()*23);
+        int num = (int) (Math.random()*name.length);
         return name[num];
     }
+
 
 }

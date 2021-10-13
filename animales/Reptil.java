@@ -1,16 +1,15 @@
 package com.adaysoft.animales;
 
 public class Reptil extends Animal{
-    private final static double tempCorpo = 47;
-    private final static String[] colorEscama = {"Amarillo", "gris", "negro"};
-    private final static double velocidadDesplaz = 127.5;
-
-    public Reptil(String nombre, int edad, String genero, double tempCorpo) {
-        super(nombre, edad, genero);
+    private final static double tempCorpo = (Math.random()*50) + 1;
+    private final static double velocidadDesplaz = (Math.random()*100) + 1;
+    public enum colorEscama{
+        AMARILLO,
+        GRIS,
+        NEGRO
     }
 
-    @Override
-    void mostrarInformacion() {
-
+    public Reptil(String nombre, int edad, String genero) {
+        super(nombre, edad);
     }
 }
