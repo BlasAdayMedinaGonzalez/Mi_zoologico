@@ -14,15 +14,23 @@ public class Animal {
         this.edad = edad;
     }
 
+    public Animal() {
+    }
+
     public static genero generarGenero() {
         genero[] generoGenerado = {genero.Macho, genero.Hembra};
         int num = (int) (Math.random()*generoGenerado.length);
         return generoGenerado[num];
     };
 
+    public double generarNumeroAleatorio(double Min, double Max){
+        double numero = Math.random() * Max + Min;
+        return numero;
+    };
+
 
     public static String generarNombre(){
-        String[] name = {"Tifón",
+        String[] names = {"Tifón",
                 "El bicho",
                 "Mango",
                 "Piña",
@@ -46,8 +54,8 @@ public class Animal {
                 "Iniesta",
                 "Mikasa"
         };
-        int num = (int) (Math.random()*name.length);
-        return name[num];
+        int num = (int) (Math.random()*names.length);
+        return names[num];
     }
 
 
