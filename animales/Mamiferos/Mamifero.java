@@ -11,8 +11,8 @@ public class Mamifero extends Animal {
     private String dieta;
     private String habito;
 
-    public Mamifero(String nombre, int edad, double peso, double velocidad, String dieta, String habito) {
-        super(nombre, edad);
+    public Mamifero(String nombre, int edad,String genero, double peso, double velocidad, String dieta, String habito) {
+        super(nombre, edad,genero);
         this.peso = peso;
         this.velocidad = velocidad;
         this.dieta = dieta;
@@ -74,13 +74,13 @@ public class Mamifero extends Animal {
         switch ((int)numeroRandom) {
             case 1:
                 Gato gato = new Gato(
-                        animal.generarNombre(), (int)animal.generarNumeroAleatorio(1,15), animal.generarNumeroAleatorio(1,25),
+                        animal.generarNombre(), (int)animal.generarNumeroAleatorio(1,15),animal.generarGenero() ,animal.generarNumeroAleatorio(1,25),
                         animal.generarNumeroAleatorio(1,30), mamifero.generardietaAleatorio(), mamifero.generarhabitoAleatorio()
                 );
                 return gato;
             case 2:
                 Perro perro = new Perro(
-                        animal.generarNombre(), (int)animal.generarNumeroAleatorio(1,15), animal.generarNumeroAleatorio(1,25),
+                        animal.generarNombre(), (int)animal.generarNumeroAleatorio(1,15),animal.generarGenero() ,animal.generarNumeroAleatorio(1,25),
                         animal.generarNumeroAleatorio(1,30), mamifero.generardietaAleatorio(), mamifero.generarhabitoAleatorio()
                 );
                 return perro;

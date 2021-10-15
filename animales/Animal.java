@@ -3,24 +3,33 @@ package com.adaysoft.animales;
 public class Animal {
     private String nombre;
     private int edad;
+    private String genero;
 
-    public enum genero {
-        Macho,
-        Hembra
-    }
-
-    public Animal(String nombre, int edad) {
+    public Animal(String nombre, int edad, String genero) {
         this.nombre = nombre;
         this.edad = edad;
+        this.genero = genero;
     }
 
     public Animal() {
     }
 
-    public static genero generarGenero() {
-        genero[] generoGenerado = {genero.Macho, genero.Hembra};
-        int num = (int) (Math.random()*generoGenerado.length);
-        return generoGenerado[num];
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public String generarGenero() {
+        String[] arrGenero = {"Macho", "Hembra"};
+        int num = (int) (Math.random()*arrGenero.length);
+        return arrGenero[num];
     };
 
     public double generarNumeroAleatorio(double Min, double Max){

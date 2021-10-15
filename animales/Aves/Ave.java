@@ -7,8 +7,8 @@ public class Ave extends Animal {
     private String colorPlumaje;
     private String tipoPata;
 
-    public Ave(String nombre, int edad, double altitudMaxima, String colorPlumaje, String tipoPata) {
-        super(nombre, edad);
+    public Ave(String nombre, int edad,String genero, double altitudMaxima, String colorPlumaje, String tipoPata) {
+        super(nombre, edad,genero);
         this.altitudMaxima = altitudMaxima;
         this.colorPlumaje = colorPlumaje;
         this.tipoPata = tipoPata;
@@ -61,13 +61,13 @@ public class Ave extends Animal {
         switch ((int)numeroRandom) {
             case 1:
                 Canario canario = new Canario(
-                        animal.generarNombre(), (int)animal.generarNumeroAleatorio(1,25), animal.generarNumeroAleatorio(1,200),
+                        animal.generarNombre(), (int)animal.generarNumeroAleatorio(1,25),animal.generarGenero(), animal.generarNumeroAleatorio(1,200),
                         ave.generarColorAleatorio(), ave.generartipoPataAleatorio()
                 );
                 return canario;
             case 2:
                 Aguila aguila = new Aguila(
-                        animal.generarNombre(), (int)animal.generarNumeroAleatorio(1,30), animal.generarNumeroAleatorio(1,500),
+                        animal.generarNombre(), (int)animal.generarNumeroAleatorio(1,30), animal.generarGenero(),animal.generarNumeroAleatorio(1,500),
                         ave.generarColorAleatorio(), ave.generartipoPataAleatorio());
                 return aguila;
             default:
