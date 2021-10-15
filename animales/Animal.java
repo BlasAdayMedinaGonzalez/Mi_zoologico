@@ -29,7 +29,7 @@ public class Animal {
     };
 
 
-    public static String generarNombre(){
+    public String generarNombre(){
         String[] names = {"Tifón",
                 "El bicho",
                 "Mango",

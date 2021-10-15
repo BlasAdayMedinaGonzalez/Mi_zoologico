@@ -43,14 +43,14 @@ public class Ave extends Animal {
 
     public String generarColorAleatorio() {
         String [] arrColores = {"Rojo", "Verde", "Azul"};
-        Animal color = new Animal();
-        int numeroAleatorio = (int) color.generarNumeroAleatorio(0,arrColores.length);
+        Animal animal = new Animal();
+        int numeroAleatorio = (int) animal.generarNumeroAleatorio(0,arrColores.length);
         return arrColores[numeroAleatorio];
     }
     public String generartipoPataAleatorio() {
         String [] arrtipoPata = {"Palmípeda", "Garra"};
-        Animal tipoPata = new Animal();
-        int numeroAleatorio = (int) tipoPata.generarNumeroAleatorio(0,arrtipoPata.length);
+        Animal animal = new Animal();
+        int numeroAleatorio = (int) animal.generarNumeroAleatorio(0,arrtipoPata.length);
         return arrtipoPata[numeroAleatorio];
     }
 
@@ -58,6 +58,27 @@ public class Ave extends Animal {
         Animal animal = new Animal();
         Ave ave = new Ave();
         double numeroRandom = animal.generarNumeroAleatorio(1,2);
-        switch ()
+        switch ((int)numeroRandom) {
+            case 1:
+                Canario canario = new Canario(
+                        animal.generarNombre(), (int)animal.generarNumeroAleatorio(1,25), animal.generarNumeroAleatorio(1,200),
+                        ave.generarColorAleatorio(), ave.generartipoPataAleatorio()
+                );
+                return canario;
+            case 2:
+                Aguila aguila = new Aguila(
+                        animal.generarNombre(), (int)animal.generarNumeroAleatorio(1,30), animal.generarNumeroAleatorio(1,500),
+                        ave.generarColorAleatorio(), ave.generartipoPataAleatorio());
+                return aguila;
+            default:
+                return ave;
+        }
+    }
+
+    public String toString(){
+        return    " altitudMaxima= " + getAltitudMaxima()
+                + ", colorPlumaje = " + getColorPlumaje() + '\''
+                + ", tipoGarra = " + getTipoPata() + '\''
+                + "Tipo animal: AVE";
     }
 }
