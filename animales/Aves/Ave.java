@@ -77,8 +77,8 @@ public class Ave extends Animal {
 
     public String toString(){
         return    " altitudMaxima= " + getAltitudMaxima()
-                + ", colorPlumaje = " + getColorPlumaje() + '\''
-                + ", tipoGarra = " + getTipoPata() + '\''
-                + "Tipo animal: AVE";
+                + ", colorPlumaje = " + getColorPlumaje()
+                + ", tipoGarra = " + getTipoPata()
+                + " Tipo animal: AVE";
     }
 }

@@ -72,4 +72,10 @@ public class Reptil extends Animal {
                 return reptil;
         }
     }
+    public String toString(){
+        return    " temperatura corporal = " + getTempCorpo()
+                + ", velocidad desplazamiento = " + getVelocidadDesplaz()
+                + ", color Escama = " + getColorEscama()
+                + "Tipo animal: Mamífero";
+    }
 }

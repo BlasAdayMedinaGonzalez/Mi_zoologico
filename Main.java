@@ -12,6 +12,6 @@ public class Main {
         int numeroEspacios = sc.nextInt();
         System.out.println("Introduce numero Animales");
         int numeroAnimales = sc.nextInt();
-        Zoologico zoo = new Zoologico(numeroEspacios,numeroAnimales);
+        Zoologico zoo = new Zoologico(numeroEspacios, numeroAnimales);
     }
 }

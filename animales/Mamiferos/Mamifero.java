@@ -91,8 +91,8 @@ public class Mamifero extends Animal {
 
     public String toString(){
         return    " peso= " + getPeso()
-                + ", velocidad = " + getVelocidad() + '\''
-                + ", dieta = " + getDieta() + '\''
+                + ", velocidad = " + getVelocidad()
+                + ", dieta = " + getDieta()
                 + "Tipo animal: Mamífero";
     }
 

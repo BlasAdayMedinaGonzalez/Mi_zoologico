@@ -18,7 +18,7 @@ public class Zoologico {
     final static int NUMERO_ANIMALES = 6;
 
     public Zoologico(int numeroEspacios, int numeroAnimales) {
-        ArrayList<Animal> animales = new ArrayList<>();
+        ArrayList<Animal> animales;
         String tipoAnimal = "";
         if (comprobacionEspacios(numeroEspacios, numeroAnimales)) {
             System.out.println("Animales del Zoo:");
@@ -37,11 +37,12 @@ public class Zoologico {
                 }else if(animales.get(i) instanceof Lagarto){
                     tipoAnimal="Lagarto";
                 }
+                //System.out.println("Espacio " + espacio de cada objeto);
+                //No se como conseguir cada espacio de cada objeto
                 System.out.println(tipoAnimal + " Nombre: " + animales.get(i).getNombre()
                         + " Edad: " + animales.get(i).getEdad()
                         + " Género: " + animales.get(i).getGenero()
                         + " " + animales.get(i).toString()
-
                 );
             }
 
@@ -74,6 +75,7 @@ public class Zoologico {
             if(i< animalesSobrantes){
                 switch (numAleatorio) {
                     case 1:
+
                         Aguila aguila = new Aguila(ave.generarNombre(),
                                 (int) ave.generarNumeroAleatorio(1, 15),
                                 "Macho",
@@ -128,7 +130,7 @@ public class Zoologico {
                                 rep.generarNumeroAleatorio(1,1000), rep.generarColorEscama()
                         );
                         Lagarto lagartoH = new Lagarto(
-                                rep.generarNombre(), (int)rep.generarNumeroAleatorio(1,5000),"Macho", rep.generarNumeroAleatorio(1,4500),
+                                rep.generarNombre(), (int)rep.generarNumeroAleatorio(1,5000),"Hembra", rep.generarNumeroAleatorio(1,4500),
                                 rep.generarNumeroAleatorio(1,1000), rep.generarColorEscama()
                         );
                         animal.add(lagarto);
@@ -143,6 +145,8 @@ public class Zoologico {
                                 ma.generarNombre(), (int)ma.generarNumeroAleatorio(1,15),"Hembra" ,ma.generarNumeroAleatorio(1,25),
                                 ma.generarNumeroAleatorio(1,30), ma.generardietaAleatorio(), ma.generarhabitoAleatorio()
                         );
+                        animal.add(perro);
+                        animal.add(perroH);
                         break;
                     case 6:
                         Gato gato = new Gato(
@@ -153,6 +157,8 @@ public class Zoologico {
                                 ma.generarNombre(), (int)ma.generarNumeroAleatorio(1,15),"Hembra" ,ma.generarNumeroAleatorio(1,25),
                                 ma.generarNumeroAleatorio(1,30), ma.generardietaAleatorio(), ma.generarhabitoAleatorio()
                         );
+                        animal.add(gato);
+                        animal.add(gatoH);
                         break;
 
                 }
