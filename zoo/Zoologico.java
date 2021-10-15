@@ -37,10 +37,10 @@ public class Zoologico {
                 }else if(animales.get(i) instanceof Lagarto){
                     tipoAnimal="Lagarto";
                 }
-                System.out.println("Tipo: " + tipoAnimal + "Nombre" + animales.get(i).getNombre()
-                        + "Edad" + animales.get(i).getEdad()
-                        + "Género" + animales.get(i).getGenero()
-                        + "" + animales.get(i).toString()
+                System.out.println(tipoAnimal + " Nombre: " + animales.get(i).getNombre()
+                        + " Edad: " + animales.get(i).getEdad()
+                        + " Género: " + animales.get(i).getGenero()
+                        + " " + animales.get(i).toString()
 
                 );
             }
@@ -92,14 +92,67 @@ public class Zoologico {
                         animal.add(aguilaH);
                         break;
                     case 2:
+                        Canario canario = new Canario(ave.generarNombre(), (
+                                int) ave.generarNumeroAleatorio(1, 15),
+                                "Macho",
+                                ave.generarNumeroAleatorio(1,220),
+                                ave.generarColorAleatorio(),
+                                ave.generartipoPataAleatorio()
+                        );
+                        Canario canarioH = new Canario(ave.generarNombre(), (
+                                int) ave.generarNumeroAleatorio(1, 15),
+                                "Hembra",
+                                ave.generarNumeroAleatorio(1,220),
+                                ave.generarColorAleatorio(),
+                                ave.generartipoPataAleatorio()
+                        );
+                        animal.add(canario);
+                        animal.add(canarioH);
                         break;
                     case 3:
+                        Dragon dragon = new Dragon(
+                                rep.generarNombre(), (int)rep.generarNumeroAleatorio(1,5000),"Macho", rep.generarNumeroAleatorio(1,4500),
+                                rep.generarNumeroAleatorio(1,1000), rep.generarColorEscama()
+                        );
+                        Dragon dragonH = new Dragon(
+                                rep.generarNombre(), (int)rep.generarNumeroAleatorio(1,5000),"Hembra", rep.generarNumeroAleatorio(1,4500),
+                                rep.generarNumeroAleatorio(1,1000), rep.generarColorEscama()
+                        );
+                        animal.add(dragon);
+                        animal.add(dragonH);
+
                         break;
                     case 4:
+                        Lagarto lagarto = new Lagarto(
+                                rep.generarNombre(), (int)rep.generarNumeroAleatorio(1,5000),"Macho", rep.generarNumeroAleatorio(1,4500),
+                                rep.generarNumeroAleatorio(1,1000), rep.generarColorEscama()
+                        );
+                        Lagarto lagartoH = new Lagarto(
+                                rep.generarNombre(), (int)rep.generarNumeroAleatorio(1,5000),"Macho", rep.generarNumeroAleatorio(1,4500),
+                                rep.generarNumeroAleatorio(1,1000), rep.generarColorEscama()
+                        );
+                        animal.add(lagarto);
+                        animal.add(lagartoH);
                         break;
                     case 5:
+                        Perro perro = new Perro(
+                                ma.generarNombre(), (int)ma.generarNumeroAleatorio(1,15),"Macho" ,ma.generarNumeroAleatorio(1,25),
+                                ma.generarNumeroAleatorio(1,30), ma.generardietaAleatorio(), ma.generarhabitoAleatorio()
+                        );
+                        Perro perroH = new Perro(
+                                ma.generarNombre(), (int)ma.generarNumeroAleatorio(1,15),"Hembra" ,ma.generarNumeroAleatorio(1,25),
+                                ma.generarNumeroAleatorio(1,30), ma.generardietaAleatorio(), ma.generarhabitoAleatorio()
+                        );
                         break;
                     case 6:
+                        Gato gato = new Gato(
+                                ma.generarNombre(), (int)ma.generarNumeroAleatorio(1,15),"Macho" ,ma.generarNumeroAleatorio(1,25),
+                                ma.generarNumeroAleatorio(1,30), ma.generardietaAleatorio(), ma.generarhabitoAleatorio()
+                        );
+                        Gato gatoH = new Gato(
+                                ma.generarNombre(), (int)ma.generarNumeroAleatorio(1,15),"Hembra" ,ma.generarNumeroAleatorio(1,25),
+                                ma.generarNumeroAleatorio(1,30), ma.generardietaAleatorio(), ma.generarhabitoAleatorio()
+                        );
                         break;
 
                 }
